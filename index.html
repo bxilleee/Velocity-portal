@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocity Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="brand">🚀 <span>HUB</span></div>
+            <nav>
+                <button class="nav-item active" onclick="showPage('news')"><i class="fa-solid fa-newspaper"></i> <span>Announcements</span></button>
+                <button class="nav-item" onclick="showPage('codes')"><i class="fa-solid fa-code"></i> <span>Source Codes</span></button>
+                <button class="nav-item" onclick="showPage('gift')"><i class="fa-solid fa-gift"></i> <span>Giveaway</span></button>
+            </nav>
+            <div class="user-area" id="auth-zone">
+                <a href="/auth/discord" class="login-btn"><i class="fa-brands fa-discord"></i> Login</a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section id="news" class="page active">
+                <h2>📢 Announcements</h2>
+                <div class="card">
+                    <span class="tag">New</span>
+                    <h3>Server Upgrade Complete</h3>
+                    <p>We've optimized our backend for faster source code delivery. Check out the new download speeds!</p>
+                </div>
+            </section>
+
+            <section id="codes" class="page">
+                <h2>📦 Source Codes</h2>
+                <div class="download-grid">
+                    <div class="card">
+                        <h3>Bot Framework v2</h3>
+                        <p>Fully functional Discord bot source code with role management.</p>
+                        <button class="dl-btn">Download .ZIP</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="gift" class="page">
+                <h2>🎁 Next Giveaway</h2>
+                <div class="timer-card">
+                    <div id="countdown">
+                        <div class="time-part"><span id="days">00</span><label>Days</label></div>
+                        <div class="time-part"><span id="hours">00</span><label>Hours</label></div>
+                        <div class="time-part"><span id="mins">00</span><label>Mins</label></div>
+                    </div>
+                    <p>Prize: **Premium License Key**</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
